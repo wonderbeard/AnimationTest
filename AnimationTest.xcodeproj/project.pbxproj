@@ -24,6 +24,7 @@
 		9D955A8B22070D94008DDE95 /* ModelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8A22070D94008DDE95 /* ModelStatus.swift */; };
 		9D955A8D22070D9D008DDE95 /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8C22070D9D008DDE95 /* Try.swift */; };
 		9D955A8F22070E41008DDE95 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8E22070E41008DDE95 /* GenericError.swift */; };
+		9D955A9122071810008DDE95 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A9022071810008DDE95 /* UIColor+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		9D955A8A22070D94008DDE95 /* ModelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStatus.swift; sourceTree = "<group>"; };
 		9D955A8C22070D9D008DDE95 /* Try.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Try.swift; sourceTree = "<group>"; };
 		9D955A8E22070E41008DDE95 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		9D955A9022071810008DDE95 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		9D955A8822070D6C008DDE95 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9D955A9022071810008DDE95 /* UIColor+Hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				9D955A612206F20C008DDE95 /* ViewController.swift in Sources */,
 				9D955A7C220702C7008DDE95 /* PresenterProtocol.swift in Sources */,
 				9D955A5F2206F20C008DDE95 /* AppDelegate.swift in Sources */,
+				9D955A9122071810008DDE95 /* UIColor+Hex.swift in Sources */,
 				9D955A762207029D008DDE95 /* Loader.swift in Sources */,
 				9D955A8722070B81008DDE95 /* Phase.swift in Sources */,
 				9D955A82220702EC008DDE95 /* ViewProtocol.swift in Sources */,
