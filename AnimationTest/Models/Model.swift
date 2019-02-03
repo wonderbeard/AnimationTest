@@ -8,8 +8,12 @@
 
 import Foundation
 
-class Model {
+final class Model {
+    private let loader: LoaderProtocol
     
+    init(loader: LoaderProtocol) {
+        self.loader = loader
+    }
 }
 
 extension Model: ModelProtocol {

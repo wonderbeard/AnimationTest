@@ -8,17 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    private var presenter: PresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        stackSetup()
     }
 
 
 }
 
 extension ViewController: ViewProtocol {
+    
+}
+
+private extension ViewController {
+    
+    struct C {
+        static let path = "phases"
+        static let ext = "json"
+    }
+    
+    func stackSetup() {
+        let loader = Loader(path: C.path, ext: C.ext)
+        let model = Model(loader: loader)
+        let presenter = Presenter(model: model)
+        presenter.view = self
+        self.presenter = presenter
+    }
     
 }
 

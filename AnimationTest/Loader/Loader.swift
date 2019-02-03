@@ -8,8 +8,14 @@
 
 import Foundation
 
-class Loader {
+final class Loader {
+    private let path: String
+    private let ext: String
     
+    init (path: String, ext: String) {
+        self.path = path
+        self.ext = ext
+    }
 }
 
 extension Loader: LoaderProtocol {

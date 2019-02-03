@@ -6,8 +6,13 @@
 //  Copyright © 2019 Inna Kuts. All rights reserved.
 //
 
-class Presenter {
+final class Presenter {
+    private let model: ModelProtocol
+    weak var view: ViewProtocol?
     
+    init(model: ModelProtocol) {
+        self.model = model
+    }
 }
 
 extension Presenter: PresenterProtocol {
