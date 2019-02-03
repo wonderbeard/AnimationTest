@@ -28,9 +28,9 @@ extension Presenter: ModelOutput {
         case .empty:
             break
         case .loading:
-            break
+            view?.setLoading()
         case .failure(let error):
-            break
+            view?.set(error: error)
         case .success(let phases):
             view?.set(phases: phases)
         }
