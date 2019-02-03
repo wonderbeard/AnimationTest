@@ -7,5 +7,5 @@
 //
 
 protocol ViewProtocol: class {
-    
+    func set(phases: [Phase])
 }

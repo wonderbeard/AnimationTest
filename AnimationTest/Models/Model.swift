@@ -26,6 +26,15 @@ final class Model {
 extension Model: ModelProtocol {    
     
     func load() {
-        
+        status = .loading
+        loader.load { [weak self] (result) in
+            guard let strongSelf = self else { return }
+            switch result {
+            case .success(let phases):
+                strongSelf.status = .success(phases)
+            case .failure(let error):
+                strongSelf.status = .failure(error)
+            }
+        }
     }
 }

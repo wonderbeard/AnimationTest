@@ -15,6 +15,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         stackSetup()
+        presenter?.load()
     }
 
 
@@ -22,6 +23,10 @@ final class ViewController: UIViewController {
 
 extension ViewController: ViewProtocol {
     
+    func set(phases: [Phase]) {
+        
+    }
+
 }
 
 private extension ViewController {
