@@ -31,7 +31,16 @@ final class ViewController: UIViewController {
     }
 
     @IBAction func onStartButtonTap(_ sender: UIButton) {
-        presenter?.startSequence()
+        startButton.isHidden = true
+        animationView?.backgroundColor = UIColor.cyan
+        UIView.animate(withDuration: 2.0, animations: { [weak self] in
+            self?.animationView?.transform = CGAffineTransform(scaleX: C.initialViewScale, y: C.initialViewScale)
+            }, completion: { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.presenter?.startSequence()
+                strongSelf.phaseStackView.isHidden = false
+                strongSelf.remainingTimeStackView.isHidden = false
+        })
     }
     
 }
@@ -72,6 +81,17 @@ private extension ViewController {
         static let remainingTitle = "Remaining"
     }
     
+    func multiplier(from type:PhaseType) -> CGFloat? {
+        switch type {
+        case .exhale:
+            return 0.5
+        case .inhale:
+            return 1.0
+        case .hold:
+            return nil
+        }
+    }
+    
     func stackSetup() {
         let loader = Loader(path: C.path, ext: C.ext)
         let model = Model(loader: loader)
@@ -95,16 +115,26 @@ private extension ViewController {
 extension ViewController: SequenceObserver {
     
     func timeUpdated(sequence: TimeInterval, phase: TimeInterval) {
-        
+        remainingTimeLabel.text = String(sequence)
+        phaseDurationLabel.text = String(phase)
     }
     
     func phaseBegan(phase: Phase) {
-        
+        phaseNameLabel.text = phase.type.rawValue.uppercased()
+        animationView.backgroundColor = UIColor.init(hexFromString: phase.color)
+        if let scale = multiplier(from: phase.type) {
+            UIView.animate(withDuration: phase.duration) { [weak self] in
+                self?.animationView?.transform = CGAffineTransform(scaleX: scale, y: scale)
+            }
+        }
     }
     
     func sequenceCompleted() {
-        
+        startButton.isHidden = false
+        phaseStackView.isHidden = true
+        remainingTimeStackView.isHidden = true
     }
+    
     
     
 }
