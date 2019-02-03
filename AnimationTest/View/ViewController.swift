@@ -115,8 +115,8 @@ private extension ViewController {
 extension ViewController: SequenceObserver {
     
     func timeUpdated(sequence: TimeInterval, phase: TimeInterval) {
-        remainingTimeLabel.text = String(sequence)
-        phaseDurationLabel.text = String(phase)
+        remainingTimeLabel.text = sequence.stringFormatted()
+        phaseDurationLabel.text = phase.stringFormatted()
     }
     
     func phaseBegan(phase: Phase) {

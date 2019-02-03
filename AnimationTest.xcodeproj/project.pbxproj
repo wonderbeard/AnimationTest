@@ -27,6 +27,7 @@
 		9D955A9122071810008DDE95 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A9022071810008DDE95 /* UIColor+Hex.swift */; };
 		9D955A93220718C8008DDE95 /* PhaseSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A92220718C8008DDE95 /* PhaseSequence.swift */; };
 		9D955A95220735C4008DDE95 /* BreatheGererator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A94220735C4008DDE95 /* BreatheGererator.swift */; };
+		9D955A9722073FAB008DDE95 /* TimeInterval+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A9622073FAB008DDE95 /* TimeInterval+Format.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9D955A9022071810008DDE95 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		9D955A92220718C8008DDE95 /* PhaseSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseSequence.swift; sourceTree = "<group>"; };
 		9D955A94220735C4008DDE95 /* BreatheGererator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheGererator.swift; sourceTree = "<group>"; };
+		9D955A9622073FAB008DDE95 /* TimeInterval+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Format.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				9D955A9022071810008DDE95 /* UIColor+Hex.swift */,
+				9D955A9622073FAB008DDE95 /* TimeInterval+Format.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				9D955A7E220702D0008DDE95 /* Model.swift in Sources */,
 				9D955A80220702DD008DDE95 /* ModelProtocol.swift in Sources */,
 				9D955A78220702AC008DDE95 /* LoaderProtocol.swift in Sources */,
+				9D955A9722073FAB008DDE95 /* TimeInterval+Format.swift in Sources */,
 				9D955A8D22070D9D008DDE95 /* Try.swift in Sources */,
 				9D955A612206F20C008DDE95 /* ViewController.swift in Sources */,
 				9D955A7C220702C7008DDE95 /* PresenterProtocol.swift in Sources */,
