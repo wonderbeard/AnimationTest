@@ -26,6 +26,7 @@
 		9D955A8F22070E41008DDE95 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8E22070E41008DDE95 /* GenericError.swift */; };
 		9D955A9122071810008DDE95 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A9022071810008DDE95 /* UIColor+Hex.swift */; };
 		9D955A93220718C8008DDE95 /* PhaseSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A92220718C8008DDE95 /* PhaseSequence.swift */; };
+		9D955A95220735C4008DDE95 /* BreatheGererator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A94220735C4008DDE95 /* BreatheGererator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		9D955A8E22070E41008DDE95 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
 		9D955A9022071810008DDE95 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		9D955A92220718C8008DDE95 /* PhaseSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseSequence.swift; sourceTree = "<group>"; };
+		9D955A94220735C4008DDE95 /* BreatheGererator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheGererator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				9D955A7D220702D0008DDE95 /* Model.swift */,
 				9D955A7F220702DD008DDE95 /* ModelProtocol.swift */,
 				9D955A92220718C8008DDE95 /* PhaseSequence.swift */,
+				9D955A94220735C4008DDE95 /* BreatheGererator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				9D955A612206F20C008DDE95 /* ViewController.swift in Sources */,
 				9D955A7C220702C7008DDE95 /* PresenterProtocol.swift in Sources */,
 				9D955A5F2206F20C008DDE95 /* AppDelegate.swift in Sources */,
+				9D955A95220735C4008DDE95 /* BreatheGererator.swift in Sources */,
 				9D955A9122071810008DDE95 /* UIColor+Hex.swift in Sources */,
 				9D955A762207029D008DDE95 /* Loader.swift in Sources */,
 				9D955A8722070B81008DDE95 /* Phase.swift in Sources */,

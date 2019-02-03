@@ -31,7 +31,7 @@ final class ViewController: UIViewController {
     }
 
     @IBAction func onStartButtonTap(_ sender: UIButton) {
-        
+        presenter?.startSequence()
     }
     
 }
@@ -50,6 +50,13 @@ extension ViewController: ViewProtocol {
     }
 
     func set(error: Error) {
+        loadingView.isHidden = true
+        loadingView.stopAnimating()
+    }
+    
+    func onReady(sequence: PhaseSequence) {
+        sequence.observer = self
+        startButton.isHidden = false
         loadingView.isHidden = true
         loadingView.stopAnimating()
     }
@@ -85,3 +92,19 @@ private extension ViewController {
     }
 }
 
+extension ViewController: SequenceObserver {
+    
+    func timeUpdated(sequence: TimeInterval, phase: TimeInterval) {
+        
+    }
+    
+    func phaseBegan(phase: Phase) {
+        
+    }
+    
+    func sequenceCompleted() {
+        
+    }
+    
+    
+}

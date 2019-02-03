@@ -8,4 +8,5 @@
 
 protocol PresenterProtocol: class {
     func load()
+    func startSequence()
 }

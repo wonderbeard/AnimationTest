@@ -10,4 +10,5 @@ protocol ViewProtocol: class {
     func set(phases: [Phase])
     func setLoading()
     func set(error: Error)
+    func onReady(sequence: PhaseSequence)
 }
