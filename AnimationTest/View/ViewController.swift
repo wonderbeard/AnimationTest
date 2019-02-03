@@ -25,6 +25,8 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         stackSetup()
+        localize()
+        viewSetup()
         presenter?.load()
     }
 
@@ -37,16 +39,30 @@ final class ViewController: UIViewController {
 extension ViewController: ViewProtocol {
     
     func set(phases: [Phase]) {
+        loadingView.isHidden = true
+        loadingView.stopAnimating()
         
     }
+    
+    func setLoading() {
+        loadingView.isHidden = false
+        loadingView.startAnimating()
+    }
 
+    func set(error: Error) {
+        loadingView.isHidden = true
+        loadingView.stopAnimating()
+    }
 }
 
 private extension ViewController {
     
     struct C {
+        static let initialViewScale: CGFloat = 0.75
         static let path = "phases"
         static let ext = "json"
+        static let buttonTitle = "Tap here to start"
+        static let remainingTitle = "Remaining"
     }
     
     func stackSetup() {
@@ -57,5 +73,15 @@ private extension ViewController {
         self.presenter = presenter
     }
     
+    func localize() {
+        startButton.setTitle(C.buttonTitle, for: .normal)
+        remainingLabel.text = C.remainingTitle
+    }
+    
+    func viewSetup() {
+        phaseStackView.isHidden = true
+        remainingTimeStackView.isHidden = true
+        startButton.isHidden = true
+    }
 }
 
