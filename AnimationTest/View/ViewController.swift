@@ -10,6 +10,16 @@ import UIKit
 
 final class ViewController: UIViewController {
 
+    @IBOutlet private weak var animationView: UIView!
+    @IBOutlet private weak var phaseStackView: UIStackView!
+    @IBOutlet private weak var phaseNameLabel: UILabel!
+    @IBOutlet private weak var phaseDurationLabel: UILabel!
+    @IBOutlet private weak var startButton: UIButton!
+    @IBOutlet private weak var loadingView: UIActivityIndicatorView!
+    @IBOutlet private weak var remainingTimeStackView: UIStackView!
+    @IBOutlet private weak var remainingLabel: UILabel!
+    @IBOutlet private weak var remainingTimeLabel: UILabel!
+    
     private var presenter: PresenterProtocol?
     
     override func viewDidLoad() {
@@ -18,7 +28,10 @@ final class ViewController: UIViewController {
         presenter?.load()
     }
 
-
+    @IBAction func onStartButtonTap(_ sender: UIButton) {
+        
+    }
+    
 }
 
 extension ViewController: ViewProtocol {
