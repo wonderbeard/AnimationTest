@@ -20,6 +20,10 @@
 		9D955A80220702DD008DDE95 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A7F220702DD008DDE95 /* ModelProtocol.swift */; };
 		9D955A82220702EC008DDE95 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A81220702EC008DDE95 /* ViewProtocol.swift */; };
 		9D955A8522070AB5008DDE95 /* phases.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D955A8422070AB5008DDE95 /* phases.json */; };
+		9D955A8722070B81008DDE95 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8622070B81008DDE95 /* Phase.swift */; };
+		9D955A8B22070D94008DDE95 /* ModelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8A22070D94008DDE95 /* ModelStatus.swift */; };
+		9D955A8D22070D9D008DDE95 /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8C22070D9D008DDE95 /* Try.swift */; };
+		9D955A8F22070E41008DDE95 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8E22070E41008DDE95 /* GenericError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		9D955A7F220702DD008DDE95 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 		9D955A81220702EC008DDE95 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		9D955A8422070AB5008DDE95 /* phases.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = phases.json; sourceTree = "<group>"; };
+		9D955A8622070B81008DDE95 /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
+		9D955A8A22070D94008DDE95 /* ModelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStatus.swift; sourceTree = "<group>"; };
+		9D955A8C22070D9D008DDE95 /* Try.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Try.swift; sourceTree = "<group>"; };
+		9D955A8E22070E41008DDE95 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +78,15 @@
 		9D955A5D2206F20C008DDE95 /* AnimationTest */ = {
 			isa = PBXGroup;
 			children = (
-				9D955A8322070A6E008DDE95 /* Resourses */,
+				9D955A8922070D77008DDE95 /* Additionals */,
+				9D955A8822070D6C008DDE95 /* Extensions */,
 				9D955A5E2206F20C008DDE95 /* AppDelegate.swift */,
-				9D955A742207012C008DDE95 /* View */,
-				9D955A7322070122008DDE95 /* Loader */,
-				9D955A7222070113008DDE95 /* Presenter */,
-				9D955A7122070107008DDE95 /* Models */,
 				9D955A70220700EE008DDE95 /* Entities */,
-				9D955A652206F20E008DDE95 /* Assets.xcassets */,
+				9D955A7322070122008DDE95 /* Loader */,
+				9D955A7122070107008DDE95 /* Models */,
+				9D955A7222070113008DDE95 /* Presenter */,
+				9D955A742207012C008DDE95 /* View */,
+				9D955A8322070A6E008DDE95 /* Resourses */,
 				9D955A672206F20E008DDE95 /* LaunchScreen.storyboard */,
 				9D955A6A2206F20E008DDE95 /* Info.plist */,
 			);
@@ -87,6 +96,7 @@
 		9D955A70220700EE008DDE95 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				9D955A8622070B81008DDE95 /* Phase.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -131,9 +141,27 @@
 		9D955A8322070A6E008DDE95 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				9D955A652206F20E008DDE95 /* Assets.xcassets */,
 				9D955A8422070AB5008DDE95 /* phases.json */,
 			);
 			path = Resourses;
+			sourceTree = "<group>";
+		};
+		9D955A8822070D6C008DDE95 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9D955A8922070D77008DDE95 /* Additionals */ = {
+			isa = PBXGroup;
+			children = (
+				9D955A8A22070D94008DDE95 /* ModelStatus.swift */,
+				9D955A8C22070D9D008DDE95 /* Try.swift */,
+				9D955A8E22070E41008DDE95 /* GenericError.swift */,
+			);
+			path = Additionals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,11 +239,15 @@
 				9D955A7E220702D0008DDE95 /* Model.swift in Sources */,
 				9D955A80220702DD008DDE95 /* ModelProtocol.swift in Sources */,
 				9D955A78220702AC008DDE95 /* LoaderProtocol.swift in Sources */,
+				9D955A8D22070D9D008DDE95 /* Try.swift in Sources */,
 				9D955A612206F20C008DDE95 /* ViewController.swift in Sources */,
 				9D955A7C220702C7008DDE95 /* PresenterProtocol.swift in Sources */,
 				9D955A5F2206F20C008DDE95 /* AppDelegate.swift in Sources */,
 				9D955A762207029D008DDE95 /* Loader.swift in Sources */,
+				9D955A8722070B81008DDE95 /* Phase.swift in Sources */,
 				9D955A82220702EC008DDE95 /* ViewProtocol.swift in Sources */,
+				9D955A8B22070D94008DDE95 /* ModelStatus.swift in Sources */,
+				9D955A8F22070E41008DDE95 /* GenericError.swift in Sources */,
 				9D955A7A220702BA008DDE95 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

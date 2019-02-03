@@ -16,5 +16,7 @@ final class Presenter {
 }
 
 extension Presenter: PresenterProtocol {
-    
+    func load() {
+        
+    }
 }

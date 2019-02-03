@@ -10,12 +10,22 @@ import Foundation
 
 final class Model {
     private let loader: LoaderProtocol
+    weak var output: ModelOutput?
+
+    var status: AnimationModelStatus = .empty {
+        didSet {
+            output?.didUpdate(status: status)
+        }
+    }
     
     init(loader: LoaderProtocol) {
         self.loader = loader
     }
 }
 
-extension Model: ModelProtocol {
+extension Model: ModelProtocol {    
     
+    func load() {
+        
+    }
 }

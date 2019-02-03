@@ -7,5 +7,5 @@
 //
 
 protocol LoaderProtocol: class {
-    
+    func load(completion: @escaping (Try<[Phase]>) -> ())
 }

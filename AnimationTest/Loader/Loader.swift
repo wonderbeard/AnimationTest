@@ -20,4 +20,32 @@ final class Loader {
 
 extension Loader: LoaderProtocol {
     
+    func load(completion: @escaping (Try<[Phase]>) -> ()) {
+        DispatchQueue.global().async { [weak self] in
+            guard
+                let strongSelf = self,
+                let jsonURL = Bundle.main.url(forResource: strongSelf.path, withExtension: strongSelf.ext)
+                else {
+                    async(completion(.failure(GenericError.fileNotFound)))
+                    return
+            }
+            do {
+                let jsonData = try Data(contentsOf: jsonURL)
+                let decoder = JSONDecoder()
+                do {
+                    let animation = try decoder.decode([Phase].self, from: jsonData)
+                    async(completion(.success(animation)))
+                } catch {
+                    async(completion(.failure(GenericError.notLoaded)))
+                }
+            } catch {
+                async(completion(.failure(GenericError.notLoaded)))
+            }
+        }
+    }
 }
+
+private func async(_ block: @autoclosure @escaping () -> ()) {
+    DispatchQueue.main.async(execute: block)
+}
+
