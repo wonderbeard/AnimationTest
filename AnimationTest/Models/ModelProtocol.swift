@@ -11,6 +11,7 @@ typealias AnimationModelStatus = ModelStatus<[Phase]>
 protocol ModelProtocol: class {
     var output: ModelOutput? { get set }
     func load()
+    func reload()
 }
 
 protocol ModelOutput: class {

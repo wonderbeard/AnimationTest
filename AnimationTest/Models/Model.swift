@@ -26,15 +26,28 @@ final class Model {
 extension Model: ModelProtocol {    
     
     func load() {
+        switch status {
+        case .success(_):
+            output?.didUpdate(status: status)
+        case .loading:
+            break
+        case .empty:
+            reload()
+        case .failure(_):
+            reload()
+        }
+    }
+    
+    func reload() {
         status = .loading
-        loader.load { [weak self] (result) in
-            guard let strongSelf = self else { return }
+        loader.load { [weak self] result in
             switch result {
             case .success(let phases):
-                strongSelf.status = .success(phases)
+                self?.status = .success(phases)
             case .failure(let error):
-                strongSelf.status = .failure(error)
+                self?.status = .failure(error)
             }
         }
     }
+    
 }
