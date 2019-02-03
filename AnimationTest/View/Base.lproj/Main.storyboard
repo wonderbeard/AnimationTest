@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q3-Z8-ptl" userLabel="Container View">
-                                <rect key="frame" x="112.5" y="200" width="150" height="150"/>
+                                <rect key="frame" x="94" y="181" width="187.5" height="187.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qE7-gk-VYH">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="187.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gyu-Xb-MOa">
-                                        <rect key="frame" x="54" y="52.5" width="42" height="45"/>
+                                        <rect key="frame" x="72.5" y="71.5" width="42" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB2-0D-2O2">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -43,7 +43,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTY-oZ-pjT">
-                                        <rect key="frame" x="52" y="60" width="46" height="30"/>
+                                        <rect key="frame" x="70.5" y="79" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="onStartButtonTap:" destination="bs9-cJ-ccm" eventType="touchUpInside" id="pb4-uY-1za"/>
@@ -86,7 +86,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7Q3-Z8-ptl" firstAttribute="width" secondItem="NPu-hZ-1sn" secondAttribute="width" multiplier="0.4" id="9sV-tR-Sqk"/>
+                            <constraint firstItem="7Q3-Z8-ptl" firstAttribute="width" secondItem="NPu-hZ-1sn" secondAttribute="width" multiplier="0.5" id="9sV-tR-Sqk"/>
                             <constraint firstItem="0K7-Wr-EaS" firstAttribute="centerY" secondItem="Pgl-yU-JQx" secondAttribute="centerY" multiplier="1.5" id="MjA-Ip-0nD"/>
                             <constraint firstItem="7Q3-Z8-ptl" firstAttribute="centerY" secondItem="Pgl-yU-JQx" secondAttribute="centerY" multiplier="0.8" id="QHD-Tz-yso"/>
                             <constraint firstItem="gqj-do-XOZ" firstAttribute="centerX" secondItem="Pgl-yU-JQx" secondAttribute="centerX" id="VXd-8W-P9P"/>
