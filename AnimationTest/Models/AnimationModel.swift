@@ -8,33 +8,33 @@
 
 import Foundation
 
-final class Model {
-    private let loader: LoaderProtocol
-    weak var output: ModelOutput?
-
-    var status: AnimationModelStatus = .empty {
+final class AnimationModel {
+    
+    weak var output: AnimationModelOutput?
+    
+    private let loader: PhaseListLoaderProtocol
+    
+    private var status: AnimationModelStatus = .empty {
         didSet {
             output?.didUpdate(status: status)
         }
     }
     
-    init(loader: LoaderProtocol) {
+    init(loader: PhaseListLoaderProtocol) {
         self.loader = loader
     }
 }
 
-extension Model: ModelProtocol {    
+extension AnimationModel: AnimationModelProtocol {    
     
     func load() {
         switch status {
-        case .success(_):
+        case .success:
             output?.didUpdate(status: status)
+        case .empty, .failure:
+            reload()
         case .loading:
             break
-        case .empty:
-            reload()
-        case .failure(_):
-            reload()
         }
     }
     
@@ -49,5 +49,4 @@ extension Model: ModelProtocol {
             }
         }
     }
-    
 }

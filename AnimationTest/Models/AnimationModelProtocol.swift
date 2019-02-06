@@ -6,14 +6,14 @@
 //  Copyright © 2019 Inna Kuts. All rights reserved.
 //
 
-typealias AnimationModelStatus = ModelStatus<[Phase]>
+typealias AnimationModelStatus = ResourceRetrievalStatus<[Phase]>
 
-protocol ModelProtocol: class {
-    var output: ModelOutput? { get set }
+protocol AnimationModelProtocol: class {
+    var output: AnimationModelOutput? { get set }
     func load()
     func reload()
 }
 
-protocol ModelOutput: class {
+protocol AnimationModelOutput: class {
     func didUpdate(status: AnimationModelStatus)
 }

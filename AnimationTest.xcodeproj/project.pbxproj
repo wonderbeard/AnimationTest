@@ -8,52 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		9D955A5F2206F20C008DDE95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A5E2206F20C008DDE95 /* AppDelegate.swift */; };
-		9D955A612206F20C008DDE95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A602206F20C008DDE95 /* ViewController.swift */; };
+		9D955A612206F20C008DDE95 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A602206F20C008DDE95 /* AnimationViewController.swift */; };
 		9D955A642206F20C008DDE95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D955A622206F20C008DDE95 /* Main.storyboard */; };
 		9D955A662206F20E008DDE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D955A652206F20E008DDE95 /* Assets.xcassets */; };
 		9D955A692206F20E008DDE95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D955A672206F20E008DDE95 /* LaunchScreen.storyboard */; };
-		9D955A762207029D008DDE95 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A752207029D008DDE95 /* Loader.swift */; };
-		9D955A78220702AC008DDE95 /* LoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A77220702AC008DDE95 /* LoaderProtocol.swift */; };
-		9D955A7A220702BA008DDE95 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A79220702BA008DDE95 /* Presenter.swift */; };
-		9D955A7C220702C7008DDE95 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A7B220702C7008DDE95 /* PresenterProtocol.swift */; };
-		9D955A7E220702D0008DDE95 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A7D220702D0008DDE95 /* Model.swift */; };
-		9D955A80220702DD008DDE95 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A7F220702DD008DDE95 /* ModelProtocol.swift */; };
-		9D955A82220702EC008DDE95 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A81220702EC008DDE95 /* ViewProtocol.swift */; };
+		9D955A762207029D008DDE95 /* URLPhaseListLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A752207029D008DDE95 /* URLPhaseListLoader.swift */; };
+		9D955A78220702AC008DDE95 /* PhaseListLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A77220702AC008DDE95 /* PhaseListLoaderProtocol.swift */; };
+		9D955A7A220702BA008DDE95 /* AnimationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A79220702BA008DDE95 /* AnimationPresenter.swift */; };
+		9D955A7C220702C7008DDE95 /* AnimationPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A7B220702C7008DDE95 /* AnimationPresenterProtocol.swift */; };
+		9D955A7E220702D0008DDE95 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A7D220702D0008DDE95 /* AnimationModel.swift */; };
+		9D955A80220702DD008DDE95 /* AnimationModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A7F220702DD008DDE95 /* AnimationModelProtocol.swift */; };
+		9D955A82220702EC008DDE95 /* AnimationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A81220702EC008DDE95 /* AnimationViewProtocol.swift */; };
 		9D955A8522070AB5008DDE95 /* phases.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D955A8422070AB5008DDE95 /* phases.json */; };
 		9D955A8722070B81008DDE95 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8622070B81008DDE95 /* Phase.swift */; };
-		9D955A8B22070D94008DDE95 /* ModelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8A22070D94008DDE95 /* ModelStatus.swift */; };
-		9D955A8D22070D9D008DDE95 /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8C22070D9D008DDE95 /* Try.swift */; };
+		9D955A8B22070D94008DDE95 /* ResourceRetrievalStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8A22070D94008DDE95 /* ResourceRetrievalStatus.swift */; };
+		9D955A8D22070D9D008DDE95 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8C22070D9D008DDE95 /* Result.swift */; };
 		9D955A8F22070E41008DDE95 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A8E22070E41008DDE95 /* GenericError.swift */; };
 		9D955A9122071810008DDE95 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A9022071810008DDE95 /* UIColor+Hex.swift */; };
 		9D955A93220718C8008DDE95 /* PhaseSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A92220718C8008DDE95 /* PhaseSequence.swift */; };
 		9D955A95220735C4008DDE95 /* BreatheGererator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A94220735C4008DDE95 /* BreatheGererator.swift */; };
 		9D955A9722073FAB008DDE95 /* TimeInterval+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D955A9622073FAB008DDE95 /* TimeInterval+Format.swift */; };
+		E3DEE356220B11E8009BC967 /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEE355220B11E8009BC967 /* Decoding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9D955A5B2206F20C008DDE95 /* AnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D955A5E2206F20C008DDE95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D955A602206F20C008DDE95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D955A602206F20C008DDE95 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		9D955A632206F20C008DDE95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D955A652206F20E008DDE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D955A682206F20E008DDE95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D955A6A2206F20E008DDE95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D955A752207029D008DDE95 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
-		9D955A77220702AC008DDE95 /* LoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderProtocol.swift; sourceTree = "<group>"; };
-		9D955A79220702BA008DDE95 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		9D955A7B220702C7008DDE95 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
-		9D955A7D220702D0008DDE95 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		9D955A7F220702DD008DDE95 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
-		9D955A81220702EC008DDE95 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
+		9D955A752207029D008DDE95 /* URLPhaseListLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPhaseListLoader.swift; sourceTree = "<group>"; };
+		9D955A77220702AC008DDE95 /* PhaseListLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseListLoaderProtocol.swift; sourceTree = "<group>"; };
+		9D955A79220702BA008DDE95 /* AnimationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPresenter.swift; sourceTree = "<group>"; };
+		9D955A7B220702C7008DDE95 /* AnimationPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPresenterProtocol.swift; sourceTree = "<group>"; };
+		9D955A7D220702D0008DDE95 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
+		9D955A7F220702DD008DDE95 /* AnimationModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModelProtocol.swift; sourceTree = "<group>"; };
+		9D955A81220702EC008DDE95 /* AnimationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewProtocol.swift; sourceTree = "<group>"; };
 		9D955A8422070AB5008DDE95 /* phases.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = phases.json; sourceTree = "<group>"; };
 		9D955A8622070B81008DDE95 /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
-		9D955A8A22070D94008DDE95 /* ModelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStatus.swift; sourceTree = "<group>"; };
-		9D955A8C22070D9D008DDE95 /* Try.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Try.swift; sourceTree = "<group>"; };
+		9D955A8A22070D94008DDE95 /* ResourceRetrievalStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRetrievalStatus.swift; sourceTree = "<group>"; };
+		9D955A8C22070D9D008DDE95 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		9D955A8E22070E41008DDE95 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
 		9D955A9022071810008DDE95 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		9D955A92220718C8008DDE95 /* PhaseSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseSequence.swift; sourceTree = "<group>"; };
 		9D955A94220735C4008DDE95 /* BreatheGererator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheGererator.swift; sourceTree = "<group>"; };
 		9D955A9622073FAB008DDE95 /* TimeInterval+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Format.swift"; sourceTree = "<group>"; };
+		E3DEE355220B11E8009BC967 /* Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +114,8 @@
 		9D955A7122070107008DDE95 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9D955A7D220702D0008DDE95 /* Model.swift */,
-				9D955A7F220702DD008DDE95 /* ModelProtocol.swift */,
+				9D955A7F220702DD008DDE95 /* AnimationModelProtocol.swift */,
+				9D955A7D220702D0008DDE95 /* AnimationModel.swift */,
 				9D955A92220718C8008DDE95 /* PhaseSequence.swift */,
 				9D955A94220735C4008DDE95 /* BreatheGererator.swift */,
 			);
@@ -123,8 +125,8 @@
 		9D955A7222070113008DDE95 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				9D955A79220702BA008DDE95 /* Presenter.swift */,
-				9D955A7B220702C7008DDE95 /* PresenterProtocol.swift */,
+				9D955A7B220702C7008DDE95 /* AnimationPresenterProtocol.swift */,
+				9D955A79220702BA008DDE95 /* AnimationPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -132,8 +134,8 @@
 		9D955A7322070122008DDE95 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
-				9D955A752207029D008DDE95 /* Loader.swift */,
-				9D955A77220702AC008DDE95 /* LoaderProtocol.swift */,
+				9D955A77220702AC008DDE95 /* PhaseListLoaderProtocol.swift */,
+				9D955A752207029D008DDE95 /* URLPhaseListLoader.swift */,
 			);
 			path = Loader;
 			sourceTree = "<group>";
@@ -142,8 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				9D955A622206F20C008DDE95 /* Main.storyboard */,
-				9D955A602206F20C008DDE95 /* ViewController.swift */,
-				9D955A81220702EC008DDE95 /* ViewProtocol.swift */,
+				9D955A602206F20C008DDE95 /* AnimationViewController.swift */,
+				9D955A81220702EC008DDE95 /* AnimationViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,8 +171,9 @@
 		9D955A8922070D77008DDE95 /* Additionals */ = {
 			isa = PBXGroup;
 			children = (
-				9D955A8A22070D94008DDE95 /* ModelStatus.swift */,
-				9D955A8C22070D9D008DDE95 /* Try.swift */,
+				9D955A8C22070D9D008DDE95 /* Result.swift */,
+				E3DEE355220B11E8009BC967 /* Decoding.swift */,
+				9D955A8A22070D94008DDE95 /* ResourceRetrievalStatus.swift */,
 				9D955A8E22070E41008DDE95 /* GenericError.swift */,
 			);
 			path = Additionals;
@@ -248,23 +251,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D955A7E220702D0008DDE95 /* Model.swift in Sources */,
-				9D955A80220702DD008DDE95 /* ModelProtocol.swift in Sources */,
-				9D955A78220702AC008DDE95 /* LoaderProtocol.swift in Sources */,
+				9D955A7E220702D0008DDE95 /* AnimationModel.swift in Sources */,
+				9D955A80220702DD008DDE95 /* AnimationModelProtocol.swift in Sources */,
+				9D955A78220702AC008DDE95 /* PhaseListLoaderProtocol.swift in Sources */,
 				9D955A9722073FAB008DDE95 /* TimeInterval+Format.swift in Sources */,
-				9D955A8D22070D9D008DDE95 /* Try.swift in Sources */,
-				9D955A612206F20C008DDE95 /* ViewController.swift in Sources */,
-				9D955A7C220702C7008DDE95 /* PresenterProtocol.swift in Sources */,
+				9D955A8D22070D9D008DDE95 /* Result.swift in Sources */,
+				9D955A612206F20C008DDE95 /* AnimationViewController.swift in Sources */,
+				9D955A7C220702C7008DDE95 /* AnimationPresenterProtocol.swift in Sources */,
 				9D955A5F2206F20C008DDE95 /* AppDelegate.swift in Sources */,
 				9D955A95220735C4008DDE95 /* BreatheGererator.swift in Sources */,
 				9D955A9122071810008DDE95 /* UIColor+Hex.swift in Sources */,
-				9D955A762207029D008DDE95 /* Loader.swift in Sources */,
+				9D955A762207029D008DDE95 /* URLPhaseListLoader.swift in Sources */,
 				9D955A8722070B81008DDE95 /* Phase.swift in Sources */,
-				9D955A82220702EC008DDE95 /* ViewProtocol.swift in Sources */,
-				9D955A8B22070D94008DDE95 /* ModelStatus.swift in Sources */,
+				9D955A82220702EC008DDE95 /* AnimationViewProtocol.swift in Sources */,
+				9D955A8B22070D94008DDE95 /* ResourceRetrievalStatus.swift in Sources */,
 				9D955A8F22070E41008DDE95 /* GenericError.swift in Sources */,
 				9D955A93220718C8008DDE95 /* PhaseSequence.swift in Sources */,
-				9D955A7A220702BA008DDE95 /* Presenter.swift in Sources */,
+				E3DEE356220B11E8009BC967 /* Decoding.swift in Sources */,
+				9D955A7A220702BA008DDE95 /* AnimationPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8WLM48MPJH;
+				DEVELOPMENT_TEAM = 68RDDPSR29;
 				INFOPLIST_FILE = AnimationTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -429,7 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8WLM48MPJH;
+				DEVELOPMENT_TEAM = 68RDDPSR29;
 				INFOPLIST_FILE = AnimationTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

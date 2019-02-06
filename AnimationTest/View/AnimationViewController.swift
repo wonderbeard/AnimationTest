@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class AnimationViewController: UIViewController {
 
     @IBOutlet private weak var animationView: UIView!
     @IBOutlet private weak var phaseStackView: UIStackView!
@@ -20,7 +20,7 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var remainingLabel: UILabel!
     @IBOutlet private weak var remainingTimeLabel: UILabel!
     
-    private var presenter: PresenterProtocol?
+    private var presenter: AnimationPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,48 +32,42 @@ final class ViewController: UIViewController {
 
     @IBAction func onStartButtonTap(_ sender: UIButton) {
         startButton.isHidden = true
-        animationView?.backgroundColor = UIColor.cyan
+        animationView?.backgroundColor = .cyan
         UIView.animate(withDuration: 2.0, animations: { [weak self] in
-            self?.animationView?.transform = CGAffineTransform(scaleX: C.initialViewScale, y: C.initialViewScale)
-            }, completion: { [weak self] _ in
-                guard let strongSelf = self else { return }
-                strongSelf.presenter?.startSequence()
-                strongSelf.phaseStackView.isHidden = false
-                strongSelf.remainingTimeStackView.isHidden = false
+            self?.animationView?.transform = CGAffineTransform(scaleX: Constants.initialViewScale, y: Constants.initialViewScale)
+        }, completion: { [weak self] _ in
+            guard let strongSelf = self else { return }
+            strongSelf.presenter?.startSequence()
+            strongSelf.phaseStackView.isHidden = false
+            strongSelf.remainingTimeStackView.isHidden = false
         })
     }
-    
 }
 
-extension ViewController: ViewProtocol {
+extension AnimationViewController: AnimationViewProtocol {
     
     func set(phases: [Phase]) {
-        loadingView.isHidden = true
         loadingView.stopAnimating()
-        
     }
     
     func setLoading() {
-        loadingView.isHidden = false
         loadingView.startAnimating()
     }
 
     func set(error: Error) {
-        loadingView.isHidden = true
         loadingView.stopAnimating()
     }
     
     func onReady(sequence: PhaseSequence) {
         sequence.observer = self
         startButton.isHidden = false
-        loadingView.isHidden = true
         loadingView.stopAnimating()
     }
 }
 
-private extension ViewController {
+private extension AnimationViewController {
     
-    struct C {
+    enum Constants {
         static let initialViewScale: CGFloat = 0.75
         static let path = "phases"
         static let ext = "json"
@@ -81,7 +75,7 @@ private extension ViewController {
         static let remainingTitle = "Remaining"
     }
     
-    func multiplier(from type:PhaseType) -> CGFloat? {
+    func multiplier(from type: PhaseType) -> CGFloat? {
         switch type {
         case .exhale:
             return 0.5
@@ -92,17 +86,21 @@ private extension ViewController {
         }
     }
     
+    // Should not be configured inside of a ViewController
     func stackSetup() {
-        let loader = Loader(path: C.path, ext: C.ext)
-        let model = Model(loader: loader)
-        let presenter = Presenter(model: model)
+        guard let phaseListURL = Bundle.main.url(forResource: Constants.path, withExtension: Constants.ext) else {
+            return
+        }
+        let loader = URLPhaseListLoader(url: phaseListURL, decoding: .json(), queue: .global())
+        let model = AnimationModel(loader: loader)
+        let presenter = AnimationPresenter(model: model)
         presenter.view = self
         self.presenter = presenter
     }
     
     func localize() {
-        startButton.setTitle(C.buttonTitle, for: .normal)
-        remainingLabel.text = C.remainingTitle
+        startButton.setTitle(Constants.buttonTitle, for: .normal)
+        remainingLabel.text = Constants.remainingTitle
     }
     
     func viewSetup() {
@@ -112,11 +110,11 @@ private extension ViewController {
     }
 }
 
-extension ViewController: SequenceObserver {
+extension AnimationViewController: PhaseSequenceObserver {
     
-    func timeUpdated(sequence: TimeInterval, phase: TimeInterval) {
-        remainingTimeLabel.text = sequence.stringFormatted()
-        phaseDurationLabel.text = phase.stringFormatted()
+    func remainingTimeDidChange(currentPhase: TimeInterval, total: TimeInterval) {
+        remainingTimeLabel.text = total.stringFormatted()
+        phaseDurationLabel.text = currentPhase.stringFormatted()
     }
     
     func phaseBegan(phase: Phase) {
@@ -134,7 +132,4 @@ extension ViewController: SequenceObserver {
         phaseStackView.isHidden = true
         remainingTimeStackView.isHidden = true
     }
-    
-    
-    
 }

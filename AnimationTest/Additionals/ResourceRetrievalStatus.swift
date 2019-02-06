@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum ModelStatus<T> {
+enum ResourceRetrievalStatus<T> {
+    
     case empty
     case loading
     case success(T)
@@ -43,17 +44,16 @@ enum ModelStatus<T> {
     }
     
     var isSucceded: Bool {
-        guard case .success(_) = self else {
+        guard case .success = self else {
             return false
         }
         return true
     }
     
     var isFailed: Bool {
-        guard case .failure(_) = self else {
+        guard case .failure = self else {
             return false
         }
         return true
     }
-    
 }

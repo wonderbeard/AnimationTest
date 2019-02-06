@@ -9,9 +9,10 @@
 import UIKit
 
 extension UIColor {
-    convenience init(hexFromString:String, alpha:CGFloat = 1.0) {
-        var cString:String = hexFromString.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-        var rgbValue:UInt32 = 10066329 //color #999999 if string has wrong format
+    
+    convenience init(hexFromString: String, alpha: CGFloat = 1) {
+        var cString: String = hexFromString.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        var rgbValue: UInt32 = 10066329 //color #999999 if string has wrong format
         
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)

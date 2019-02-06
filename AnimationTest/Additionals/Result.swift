@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum Try<T> {
+enum Result<T> {
+    
     case success(T)
     case failure(Error)
     
@@ -28,13 +29,11 @@ enum Try<T> {
         self = .failure(error)
     }
     
-    init(_ optional: T?, else factory: @autoclosure () -> Error) {
+    init(_ optional: T?, else errorFactory: @autoclosure () -> Error) {
         if let t = optional {
             self = .success(t)
         } else {
-            self = .failure(factory())
+            self = .failure(errorFactory())
         }
     }
-    
-    
 }

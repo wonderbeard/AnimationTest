@@ -6,7 +6,7 @@
 //  Copyright © 2019 Inna Kuts. All rights reserved.
 //
 
-protocol PresenterProtocol: class {
+protocol AnimationPresenterProtocol: class {
     func load()
     func startSequence()
 }

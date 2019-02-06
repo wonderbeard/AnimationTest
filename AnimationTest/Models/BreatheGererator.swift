@@ -8,20 +8,23 @@
 
 import Foundation
 
+// Name does not express intentions of class
 class BreathGenerator {
     
-    private struct C {
-        static let Interval: TimeInterval = 0.1
+    private enum Constants {
+        static let interval: TimeInterval = 0.1
     }
     
-    let sequence: PhaseSequence
+    var isRunning: Bool {
+        return timer?.isValid ?? false
+    }
+    
+    private let sequence: PhaseSequence
+    
     private var timer: Timer? {
         willSet {
             timer?.invalidate()
         }
-    }
-    var isRunning: Bool {
-        return timer?.isValid ?? false
     }
     
     init(sequence: PhaseSequence) {
@@ -33,9 +36,8 @@ class BreathGenerator {
             return
         }
         sequence.start()
-        timer = Timer.scheduledTimer(withTimeInterval: C.Interval, repeats: true) { [weak self] (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: Constants.interval, repeats: true) { [weak self] (timer) in
             guard let strongSelf = self else {
-                timer.invalidate()
                 return
             }
             strongSelf.sequence.tick(deltaTime: timer.timeInterval)
@@ -48,5 +50,4 @@ class BreathGenerator {
     deinit {
         timer?.invalidate()
     }
-    
 }

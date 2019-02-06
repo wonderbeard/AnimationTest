@@ -6,7 +6,7 @@
 //  Copyright © 2019 Inna Kuts. All rights reserved.
 //
 
-protocol ViewProtocol: class {
+protocol AnimationViewProtocol: class {
     func set(phases: [Phase])
     func setLoading()
     func set(error: Error)
